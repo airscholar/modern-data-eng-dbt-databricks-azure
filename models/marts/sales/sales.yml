@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: dim_sales
+    description: This is the fact table for sales
+    columns:
+      - name: saleOrderID
+        description: The surrogate key of the sale order
+        tests:
+          - unique
+          - not_null
+      - name: saleOrderDetailID
+        description: The surrogate key of the sale order detail
+        tests:
+          - unique
+          - not_null
+      - name: orderQty
+        description: The quantity of the order
+        tests:
+          - not_null
+      - name: productID
+        description: The surrogate key of the product
+        tests:
+          - not_null
+      - name: unitPrice
+        description: The unit price of the product
+        tests:
+          - not_null
+      - name: unitPriceDiscount
+        description: The unit price discount of the product
+      - name: lineTotal
+        description: The line total of the product
+        tests:
+          - not_null
+      - name: name
+        description: The name of the product
+        tests:
+          - not_null
+      - name: productNumber
+        description: The product number of the product
+        tests:
+          - not_null
+      - name: color
+        description: The color of the product
+      - name: standardCost
+        description: The standard cost of the product
+        tests:
+          - not_null
+      - name: listPrice
+        description: The list price of the product
+        tests:
+          - not_null
+      - name: size
+        description: The size of the product
+      - name: weight
+        description: The weight of the product
+      - name: sellStartDate
+        description: The date when the product is available for sale
+        tests:
+          - not_null
+      - name: sellEndDate
+        description: The date when the product is no longer available for sale
+      - name: discontinuedDate
+        description: The date when the product is discontinued
+      - name: thumbNailPhoto
+        description: The thumbnail photo of the product
+      - name: thumbnailPhotoFileName
+        description: The thumbnail photo file name of the product
+      - name: revisionNumber
+        description: The revision number of the sale order
+      - name: orderDate
+        description: The order date of the sale order
+        tests:
+          - not_null
+      - name: dueDate
+        description: The due date of the sale order
+      - name: shipDate
+        description: The ship date of the sale order
+      - name: status
+        description: The status of the sale order
+      - name: onlineOrderFlag
+        description: The online order flag of the sale order
+      - name: salesOrderNumber
+        description: The sales order number of the sale order
+      - name: purchaseOrderNumber
+        description: The purchase order number of the sale order
+      - name: accountNumber
+        description: The account number of the sale order
+      - name: customerID
+        description: The surrogate key of the customer
+        tests:
+          - not_null
+      - name: shipToAddressID
+        description: The surrogate key of the ship to address
+      - name: billToAddressID
+        description: The surrogate key of the bill to address
+      - name: shipMethod
+        description: The ship method of the sale order
+      - name: creditCardApprovalCode
+        description: The credit card approval code of the sale order
+      - name: subTotal
+        description: The sub total of the sale order
+        tests:
+          - not_null
+      - name: taxAmt
+        description: The tax amount of the sale order
+        tests:
+          - not_null
+      - name: freight
+        description: The freight of the sale order
+        tests:
+          - not_null
+      - name: totalDue
+        description: The total due of the sale order
+        tests:
+          - not_null
+      - name: comment
+        description: The comment of the sale order
+

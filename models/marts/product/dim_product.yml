@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_products
+    columns:
+      - name: product_sk
+        description: The surrogate key of the product
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: The name of the product
+        tests:
+          - not_null
+      - name: standard_cost
+        description: The standard cost of the product
+      - name: list_price
+        description: The list price of the product
+      - name: size
+        description: The size of the product
+      - name: weight
+        description: The weight of the product
+      - name: category
+        description: The category of the product
+      - name: model
+        description: The model of the product
+      - name: description
+        description: The description of the product
+      - name: sellstartdate
+        description: The date when the product is available for sale
+        tests:
+          - not_null
+      - name: sellenddate
+        description: The date when the product is no longer available for sale
+      - name: discontinueddate
+        description: The date when the product is discontinued
